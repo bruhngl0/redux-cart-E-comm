@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,700;0,900;1,100;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 
 *{
@@ -13,6 +13,8 @@
 @import "colors";
 @import "header";
 @import "home";
+@import "cart";
+@import "mediaquery";
 
 body{
     background-color: black;

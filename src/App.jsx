@@ -6,6 +6,7 @@ import "./styles/app.scss"
 
 import Header from './components/Header'
 import Home from './components/Home'
+import Cart from './components/Cart'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path= "/" element= {<Home />}/>
+        <Route path = "/cart" element = {<Cart />}/>
       </Routes>
       <Toaster />
    </Router> 
