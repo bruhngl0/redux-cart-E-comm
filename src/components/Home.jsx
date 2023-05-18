@@ -1,5 +1,6 @@
 import React from 'react'
 import { toast } from 'react-hot-toast';
+import {useDispatch} from "react-redux"
 
 
 
@@ -25,9 +26,16 @@ const Home = () => {
         }
     ]
 
+    const dispatch = useDispatch()
+
 
     const addToCartHandler = (options) => {
-        console.log(options)
+     
+        dispatch({ 
+            type: "addToCart",
+            payload: options})
+        dispatch({type: "calculatePrice"})    
+
         toast.success("Added To Cart")
     };
 
