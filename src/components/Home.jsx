@@ -2,6 +2,8 @@ import React from 'react'
 import { toast } from 'react-hot-toast';
 import {useDispatch} from "react-redux"
 
+import ProductCard from './ProductCard';
+
 
 
 
@@ -23,7 +25,9 @@ const Home = () => {
             price: 5000,
             imgSrc: img2,
             id: 2,
-        }
+        },
+
+     
     ]
 
     const dispatch = useDispatch()
@@ -60,20 +64,6 @@ const Home = () => {
   )
 }
 
-const ProductCard = ({name, id, price, handler, imgSrc}) => {
-    return(
-        <div className='productCard'>
-            <img src = {imgSrc} alt= {name} />
-            <p>{name}</p>
-            <h4>${price}</h4>
-            <button onClick={()=> handler({name, price, id, quantity: 1, imgSrc})}>Add to Cart</button>
-
-
-
-        </div>
-
-    )
-}
 
 
 
