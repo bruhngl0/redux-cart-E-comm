@@ -1,7 +1,8 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
-import CartItem from './CartItem'
+import CartProducts from './CartItem'
 
 const Cart = () => {
 
@@ -45,7 +46,7 @@ const Cart = () => {
             cartItems.length >0 ? (
                 cartItems.map((i)=>{
                     return (
-                        <CartItem 
+                        <CartProducts 
                         imgSrc={i.imgSrc}
                         name= {i.name}
                         price= {i.price}
@@ -68,7 +69,17 @@ const Cart = () => {
             <h2>Shipping : ${shipping}</h2>
             <h2>tax : ${Tax}</h2>
             <h2>total : ${total}</h2>
+            <div>
+            <Link to = {"/payment"} >
+                <button>
+                    CHECKOUT
+                </button>
+            </Link>
+            </div>
+            
         </aside>
+
+        
       
     </div>
   )
